@@ -1,17 +1,17 @@
-## AULA 1 ##
-# INICIO REACT
+# AULA 1 ##
+## INICIO REACT
     Introdução react
     Instalação react
     Primeiras configuração
 
-# COMPONENTES
+## COMPONENTES
     Introdução de componentes
     Introdução de jsx
     Import de componentes
     Criando componentes
     Props do componente
 
-# HOOKS/EVENTOS
+## HOOKS/EVENTOS
     Introdução hooks
     useState
     useEffect
