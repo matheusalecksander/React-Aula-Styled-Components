@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+import { ComponenteNome } from "./componentes/ComponenteNome";
+import { ComponenteResumoSobreVoce } from "./componentes/ComponenteResumoSobreVoce";
+import { ComponenteCompetencia } from "./componentes/ComponenteCompetencia";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>Importando Componentes</p>
+      <hr />
+
+      <ComponenteNome />
+      <ComponenteResumoSobreVoce>
+        Moro em curitiba, trabalho na aréa de TI, eu sou desenvolvedor frondEnd
+      </ComponenteResumoSobreVoce>
+      <hr />
+      <p>Lista de Competencias</p>
+
+      <ComponenteCompetencia
+        nome="HTML"
+        descricao="Fazer pagina static para o curso realizado na Harve"
+      />
+
+      <ComponenteCompetencia
+        nome="CSS"
+        descricao="Para complemetar o curso de HTML da Harve"
+      />
     </div>
   );
 }

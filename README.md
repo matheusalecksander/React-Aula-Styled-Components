@@ -1,3 +1,26 @@
+## AULA 1 ##
+# INICIO REACT
+    Introdução react
+    Instalação react
+    Primeiras configuração
+
+# COMPONENTES
+    Introdução de componentes
+    Introdução de jsx
+    Import de componentes
+    Criando componentes
+    Props do componente
+
+# HOOKS/EVENTOS
+    Introdução hooks
+    useState
+    useEffect
+    
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
