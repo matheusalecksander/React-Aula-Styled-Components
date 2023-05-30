@@ -15,9 +15,18 @@
     Introdução hooks
     useState
     useEffect
-    
 
+# AULA 2 ##
+## INSTALANDO FERRAMENTAS
+    Introdução bootstrap
+    Utilização bootstrap
+    Rotas
 
+## AXIOS/TOASTIFY
+    Utilização do axios
+    Map - Listando produtos
+    Conceito de destructuring
+    Utilização de bootstrap
 
 
 

@@ -1,32 +1,15 @@
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 
-import { ComponenteNome } from "./componentes/ComponenteNome";
-import { ComponenteResumoSobreVoce } from "./componentes/ComponenteResumoSobreVoce";
-import { ComponenteCompetencia } from "./componentes/ComponenteCompetencia";
+import "react-toastify/dist/ReactToastify.css";
+import { RouteApp } from "./route";
 
 function App() {
   return (
-    <div className="App">
-      <p>Importando Componentes</p>
-      <hr />
-
-      <ComponenteNome />
-      <ComponenteResumoSobreVoce>
-        Moro em curitiba, trabalho na aréa de TI, eu sou desenvolvedor frondEnd
-      </ComponenteResumoSobreVoce>
-      <hr />
-      <p>Lista de Competencias</p>
-
-      <ComponenteCompetencia
-        nome="HTML"
-        descricao="Fazer pagina static para o curso realizado na Harve"
-      />
-
-      <ComponenteCompetencia
-        nome="CSS"
-        descricao="Para complemetar o curso de HTML da Harve"
-      />
-    </div>
+    <>
+      <ToastContainer />
+      <RouteApp />
+    </>
   );
 }
 
