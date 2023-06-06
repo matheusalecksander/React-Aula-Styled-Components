@@ -1,0 +1,46 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "title": "Produto 1 IMPORTADO CHINA",
+      "category": "Produto 1 da minha lista",
+      "image": "https://via.placeholder.com/200x200.png?text=Produto+1",
+      "price": 50.55
+    },
+    {
+      "id": 2,
+      "title": "Produto 2",
+      "category": "Produto 2 da minha lista",
+      "image": "https://via.placeholder.com/200x200.png?text=Produto+2",
+      "price": 60.55
+    },
+    {
+      "id": 3,
+      "title": "Produto 3",
+      "category": "Produto 3 da minha lista",
+      "image": "https://via.placeholder.com/200x200.png?text=Produto+3",
+      "price": 35.55
+    },
+    {
+      "id": 4,
+      "title": "Produto 4",
+      "category": "Produto 4 da minha lista",
+      "image": "https://via.placeholder.com/200x200.png?text=Produto+4",
+      "price": 58.55
+    },
+    {
+      "id": 5,
+      "title": "Produto 5",
+      "category": "Produto 5 da minha lista",
+      "image": "https://via.placeholder.com/200x200.png?text=Produto+5",
+      "price": 18.55
+    },
+    {
+      "id": 6,
+      "title": "Produto 6",
+      "category": "Produto 6 da minha lista",
+      "image": "https://via.placeholder.com/200x200.png?text=Produto+6",
+      "price": 12.55
+    }
+  ]
+}

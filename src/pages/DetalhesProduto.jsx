@@ -2,12 +2,12 @@ import { Container } from "react-bootstrap";
 import NavBar from "../componentes/NavBar";
 import { ListaProdutos } from "../componentes/ListaProdutos";
 
-function Produto() {
+function DetalhesProduto() {
   return (
     <NavBar>
-      <ListaProdutos />
+      <h1>Detalhes do produto</h1>
     </NavBar>
   );
 }
 
-export { Produto };
+export { DetalhesProduto };
