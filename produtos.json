@@ -1,17 +1,42 @@
 {
-  "produtos": [
+  "login": [
     {
-      "id": 1,
-      "title": "Produto 1 IMPORTADO CHINA",
-      "category": "Produto 1 da minha lista",
-      "image": "https://via.placeholder.com/200x200.png?text=Produto+1",
-      "price": 50.55
+      "email": "marcelo@teste.com",
+      "password": "123123",
+      "id": 1
     },
+    {
+      "email": "marcelo@teste.com",
+      "password": "123123",
+      "id": 2
+    },
+    {
+      "email": "marcelo@teste.com",
+      "password": "123123",
+      "id": 3
+    },
+    {
+      "email": "marcelo@teste.com",
+      "password": "123123",
+      "id": 4
+    },
+    {
+      "email": "marcelo@teste.com",
+      "password": "123123",
+      "id": 5
+    },
+    {
+      "email": "marcelo@teste.com",
+      "password": "123123",
+      "id": 6
+    }
+  ],
+  "produtos": [
     {
       "id": 2,
       "title": "Produto 2",
       "category": "Produto 2 da minha lista",
-      "image": "https://via.placeholder.com/200x200.png?text=Produto+2",
+      "image": "https://static.netshoes.com.br/produtos/senscience-true-hue-kit-para-cabelo-tingido-hidratacao-salao-(3-produtos)/01/M57-0446-N01/M57-0446-N01_zoom1.jpg?ts=1657733154&ims=544x",
       "price": 60.55
     },
     {
@@ -41,6 +66,27 @@
       "category": "Produto 6 da minha lista",
       "image": "https://via.placeholder.com/200x200.png?text=Produto+6",
       "price": 12.55
+    },
+    {
+      "id": 7,
+      "title": "Produto 5",
+      "category": "Produto 5 da minha lista",
+      "image": "https://via.placeholder.com/200x200.png?text=Produto+5",
+      "price": 18.55
+    },
+    {
+      "id": 8,
+      "title": "Produto 6",
+      "category": "Produto 6 da minha lista",
+      "image": "https://via.placeholder.com/200x200.png?text=Produto+6",
+      "price": 12.55
+    },
+    {
+      "id": 20,
+      "title": "Produto criado atualizado",
+      "category": "Produto 1 atualizado",
+      "image": "https://static.netshoes.com.br/produtos/senscience-true-hue-kit-para-cabelo-tingido-hidratacao-salao-(3-produtos)/01/M57-0446-N01/M57-0446-N01_zoom1.jpg?ts=1657733154&ims=544x",
+      "price": 2000.55
     }
   ]
 }

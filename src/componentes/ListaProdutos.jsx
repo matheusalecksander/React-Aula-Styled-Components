@@ -13,7 +13,7 @@ function ListaProdutos() {
 
   async function buscarProdutos() {
     try {
-      const response = await api.get("/produtos");
+      const response = await api.get("/productlistbyremark/home");
       setProdutos(response.data);
     } catch (error) {
       mensagemDeErro("Erro para buscar os produtos.");
