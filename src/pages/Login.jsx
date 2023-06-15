@@ -9,6 +9,7 @@ import {
   Row,
 } from "react-bootstrap";
 import "../assets/css/login.css";
+import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import api from "../_service/api";
 
@@ -16,6 +17,8 @@ function Login() {
   const [validated, setValidated] = useState(false);
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+
+  let navigate = useNavigate();
 
   function onchangeEmail(event) {
     setEmail(event.target.value);
@@ -55,12 +58,13 @@ function Login() {
 
     try {
       const data = {
-        email: "marcelo@teste.com",
-        password: "123123",
+        email: email,
+        password: senha,
       };
       const response = await api.post("/login", data);
 
-      mensagemDeSucesso('suceoo')
+      mensagemDeSucesso('sucesso')
+      navigate(`/home`);
     } catch (error) {
       mensagemDeErro("Não foi possivel realizar login");
     }
