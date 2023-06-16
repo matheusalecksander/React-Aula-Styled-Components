@@ -56,18 +56,33 @@ function Login() {
     event.preventDefault();
     setValidated(true);
 
-    try {
-      const data = {
-        email: email,
-        password: senha,
-      };
-      const response = await api.post("/login", data);
+    const data = {
+      email: email,
+      password: senha,
+    };
 
-      mensagemDeSucesso('sucesso')
-      navigate(`/home`);
-    } catch (error) {
-      mensagemDeErro("Não foi possivel realizar login");
-    }
+    const form = new FormData();
+    form.append("email", email);
+    form.append("password", senha);
+    const options = {
+      method: "POST",
+      mode: "no-cors",
+      body: form,
+    };
+
+    fetch(
+      "https://webapp353621.ip-45-79-142-173.cloudezapp.io/api/login",
+      options
+    )
+      .then((response) => response)
+      .then((data) => {
+        mensagemDeSucesso("sucesso");
+        navigate(`/home`);
+      })
+      .catch((error) => {
+        console.log(error);
+        mensagemDeErro("Não foi possivel realizar login");
+      });
   }
 
   return (
