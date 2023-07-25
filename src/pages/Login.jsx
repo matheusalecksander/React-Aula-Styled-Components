@@ -56,11 +56,6 @@ function Login() {
     event.preventDefault();
     setValidated(true);
 
-    const data = {
-      email: email,
-      password: senha,
-    };
-
     const form = new FormData();
     form.append("email", email);
     form.append("password", senha);
@@ -77,7 +72,7 @@ function Login() {
       .then((response) => response)
       .then((data) => {
         mensagemDeSucesso("sucesso");
-        navigate(`/home`);
+  
       })
       .catch((error) => {
         console.log(error);
