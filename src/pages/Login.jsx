@@ -61,23 +61,21 @@ function Login() {
     form.append("password", senha);
     const options = {
       method: "POST",
-      mode: "no-cors",
+      mode: "cors",
       body: form,
     };
 
-    fetch(
-      "https://webapp353621.ip-45-79-142-173.cloudezapp.io/api/login",
-      options
-    )
-      .then((response) => response)
-      .then((data) => {
-        mensagemDeSucesso("sucesso");
-  
-      })
-      .catch((error) => {
-        console.log(error);
-        mensagemDeErro("Não foi possivel realizar login");
-      });
+    try {
+      fetch(
+        "https://webapp353621.ip-45-79-142-173.cloudezapp.io/api/login",
+        options
+      );
+      mensagemDeSucesso("sucesso");
+
+      navigate("/home");
+    } catch (error) {
+      mensagemDeErro("Não foi possivel realizar login");
+    }
   }
 
   return (
