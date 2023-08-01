@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { toast } from "react-toastify";
 import api from "../_service/api";
 import { CardProduto } from "./CardProduto";
@@ -36,8 +36,8 @@ function ListaProdutos() {
   return (
     <>
       <Row className="justify-content-md-center">
-        <Col md={2}>
-          <h1>ListaProdutos</h1>
+        <Col md={4}>
+          <h1>Lista de Produtos</h1>
         </Col>
       </Row>
       <Row>
@@ -45,6 +45,7 @@ function ListaProdutos() {
           return (
             <Col className="m-2" key={index}>
               <CardProduto
+                idProduto={produto.id}
                 nome={produto.title}
                 preco={produto.price}
                 linkImagem={produto.image}

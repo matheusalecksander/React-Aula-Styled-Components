@@ -8,10 +8,9 @@ import {
   InputGroup,
   Row,
 } from "react-bootstrap";
-import "../assets/css/login.css";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
-import api from "../_service/api";
+import "../assets/css/login.css";
 
 function Login() {
   const [validated, setValidated] = useState(false);
@@ -52,6 +51,7 @@ function Login() {
       theme: "dark",
     });
   }
+  
   async function submitForm(event) {
     event.preventDefault();
     setValidated(true);
@@ -66,13 +66,21 @@ function Login() {
     };
 
     try {
-      fetch(
+      const response = await fetch(
         "https://webapp353621.ip-45-79-142-173.cloudezapp.io/api/login",
         options
       );
-      mensagemDeSucesso("sucesso");
+      mensagemDeSucesso("Logado com sucesso");
+      const data = await response.json();
+      const token = data.token
+      const nomeUsuario = data.user.name
+      const emailUsario = data.user.email
 
-      navigate("/home");
+      localStorage.setItem('token', token)
+      localStorage.setItem('nomeUsuario', nomeUsuario)
+      localStorage.setItem('emailUsario', emailUsario)
+
+      navigate("/");
     } catch (error) {
       mensagemDeErro("Não foi possivel realizar login");
     }

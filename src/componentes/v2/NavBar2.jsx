@@ -1,19 +1,25 @@
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
+import { GerenciarLogin } from "../GerenciarLogin";
+
 
 function NavBarV2(props) {
   return (
     <Container>
-      <Navbar bg="dark" variant="dark">
+      <Navbar bg="dark" variant="dark" fixed="top">
         <Container>
-          <Navbar.Brand href="/v2/">E-Commerce</Navbar.Brand>
+          <Navbar.Brand href="/home">E-Commerce</Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="/v2/">Home</Nav.Link>
-            <Nav.Link href="/v2/produto">Produtos</Nav.Link>
+            <Nav.Link href="/home">Home</Nav.Link>
+            <Nav.Link href="/produtos">Produtos</Nav.Link>
           </Nav>
+          <Navbar.Collapse className="justify-content-end">
+            <Navbar.Text>
+              <GerenciarLogin />
+            </Navbar.Text>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
-      <br />
-      {props.children}
+      <div style={{ marginTop: "100px" }}>{props.children}</div>
     </Container>
   );
 }
