@@ -1,27 +1,31 @@
-import { Container, Nav, Navbar } from "react-bootstrap";
 import { GerenciarLogin } from "./GerenciarLogin";
-
+import {
+  Brand,
+  GerenciarLoginContainer,
+  LinksContainer,
+  NavLink,
+  Navbar,
+  PageBody,
+  PageContainer,
+} from "./NavBar.style";
 
 function NavBar(props) {
   return (
-    <Container>
-      <Navbar bg="dark" variant="dark" fixed="top">
-        <Container>
-          <Navbar.Brand href="/home">E-Commerce</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/produtos">Produtos</Nav.Link>
-          </Nav>
-          <Navbar.Collapse className="justify-content-end">
-            <Navbar.Text>
-              <GerenciarLogin />
-            </Navbar.Text>
-          </Navbar.Collapse>
-        </Container>
+    <PageContainer>
+      <Navbar>
+        <Brand href="/home">E-Commerce</Brand>
+        <LinksContainer>
+          <NavLink href="/home">Home</NavLink>
+          <NavLink href="/produtos">Produtos</NavLink>
+        </LinksContainer>
+        <GerenciarLoginContainer>
+          <GerenciarLogin />
+        </GerenciarLoginContainer>
       </Navbar>
-      <div style={{ marginTop: "100px" }}>{props.children}</div>
-    </Container>
+      <PageBody>{props.children}</PageBody>
+    </PageContainer>
   );
 }
 
 export default NavBar;
+

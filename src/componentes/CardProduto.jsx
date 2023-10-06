@@ -1,7 +1,8 @@
 import { useContext } from "react";
-import { Button, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { CarrinhoContext } from "../hooks/CarrinhoContext";
 import { useNavigate } from "react-router-dom";
+import { CustomButton } from "./StyledButton";
 
 function CardProduto({ idProduto, nome, preco, descricao, linkImagem }) {
   const { adicionarCarrinho } = useContext(CarrinhoContext);
@@ -36,14 +37,13 @@ function CardProduto({ idProduto, nome, preco, descricao, linkImagem }) {
           {nome} - R$: {preco}
         </Card.Title>
         <Card.Text>{descricao}</Card.Text>
-        <Button
-          variant="primary"
+        <CustomButton
           onClick={() =>
             adicionarNoCarrinho(idProduto, nome, preco, descricao, linkImagem)
           }
-        >
-          ADICIONAR
-        </Button>
+          texto="ADICIONAR"
+          variante="primario"
+        />
       </Card.Body>
     </Card>
   );
